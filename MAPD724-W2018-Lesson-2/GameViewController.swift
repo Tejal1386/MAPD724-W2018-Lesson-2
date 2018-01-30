@@ -1,14 +1,9 @@
-//
-//  GameViewController.swift
-//  MAPD724-W2018-Lesson-2
-//
-//  Created by Tejal Patel on 2018-01-29.
-//  Copyright © 2018 Centennial College. All rights reserved.
-//
+
 
 import UIKit
 import SpriteKit
 import GameplayKit
+
 
 class GameViewController: UIViewController {
 
@@ -19,7 +14,7 @@ class GameViewController: UIViewController {
             // Load the SKScene from 'GameScene.sks'
             if let scene = SKScene(fileNamed: "GameScene") {
                 // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
+                scene.scaleMode = .aspectFit
                 
                 // Present the scene
                 view.presentScene(scene)
