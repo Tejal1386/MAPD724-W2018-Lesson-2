@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E41723EA20292FE900D04F21 /* Island.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41723E920292FE900D04F21 /* Island.swift */; };
 		E49513C62020053C006EE1DA /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C52020053C006EE1DA /* GameObject.swift */; };
 		E49513C82020090B006EE1DA /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C72020090B006EE1DA /* GameProtocol.swift */; };
 		E49513CA2020098F006EE1DA /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C92020098F006EE1DA /* Plane.swift */; };
+		E49513CC20201303006EE1DA /* Ocean.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513CB20201303006EE1DA /* Ocean.swift */; };
 		E4FB8CEC201FF1D400363BB8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4FB8CEB201FF1D400363BB8 /* AppDelegate.swift */; };
 		E4FB8CEE201FF1D400363BB8 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4FB8CED201FF1D400363BB8 /* GameScene.sks */; };
 		E4FB8CF0201FF1D400363BB8 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4FB8CEF201FF1D400363BB8 /* Actions.sks */; };
@@ -36,9 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E41723E920292FE900D04F21 /* Island.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Island.swift; sourceTree = "<group>"; };
 		E49513C52020053C006EE1DA /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		E49513C72020090B006EE1DA /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		E49513C92020098F006EE1DA /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
+		E49513CB20201303006EE1DA /* Ocean.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ocean.swift; sourceTree = "<group>"; };
 		E4FB8CE8201FF1D400363BB8 /* MAPD724-W2018-Lesson-2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MAPD724-W2018-Lesson-2.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FB8CEB201FF1D400363BB8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4FB8CED201FF1D400363BB8 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -82,6 +86,8 @@
 				E49513C52020053C006EE1DA /* GameObject.swift */,
 				E49513C72020090B006EE1DA /* GameProtocol.swift */,
 				E49513C92020098F006EE1DA /* Plane.swift */,
+				E49513CB20201303006EE1DA /* Ocean.swift */,
+				E41723E920292FE900D04F21 /* Island.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -251,7 +257,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49513CC20201303006EE1DA /* Ocean.swift in Sources */,
 				E49513C62020053C006EE1DA /* GameObject.swift in Sources */,
+				E41723EA20292FE900D04F21 /* Island.swift in Sources */,
 				E49513C82020090B006EE1DA /* GameProtocol.swift in Sources */,
 				E4FB8CF2201FF1D400363BB8 /* GameScene.swift in Sources */,
 				E4FB8CF4201FF1D400363BB8 /* GameViewController.swift in Sources */,
