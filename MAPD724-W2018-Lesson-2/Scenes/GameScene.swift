@@ -21,7 +21,7 @@ class GameScene: SKScene {
     var oceanSprite: Ocean?
     var PlaneSprite: Plane?
     var islandSprite: Island?
-    
+    var cloudSprites: [Cloud] = []
     
     override func didMove(to view: SKView) {
         
@@ -41,7 +41,12 @@ class GameScene: SKScene {
         self.islandSprite = Island()
         self.addChild(self.islandSprite!)
         
-        
+        //add clouds
+        for index in 0...2{
+            let cloud: Cloud = Cloud()
+            cloudSprites.append(cloud)
+            self.addChild(cloudSprites[index])
+        }
         
        //background sound
         let engineSound = SKAudioNode(fileNamed: "engine.mp3")
@@ -100,5 +105,9 @@ class GameScene: SKScene {
         self.oceanSprite?.Update()
         self.PlaneSprite?.Update()
         self.islandSprite?.Update()
+        
+        for cloud in cloudSprites{
+            cloud.Update()
+        }
     }
 }

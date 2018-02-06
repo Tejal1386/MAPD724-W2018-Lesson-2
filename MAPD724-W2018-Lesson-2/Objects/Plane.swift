@@ -32,7 +32,7 @@ class Plane: GameObject {
     }
     
     override func Start() {
-        
+           self.zPosition = 2
     }
     
     override func Update() {
