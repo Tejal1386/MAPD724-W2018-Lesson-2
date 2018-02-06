@@ -106,8 +106,12 @@ class GameScene: SKScene {
         self.PlaneSprite?.Update()
         self.islandSprite?.Update()
         
+        CollisionManager.CheckCllision(scene: self, object1: PlaneSprite!, object2: islandSprite!)
+        
         for cloud in cloudSprites{
             cloud.Update()
+            CollisionManager.CheckCllision(scene: self, object1: PlaneSprite!, object2: cloud)
+            
         }
     }
 }
