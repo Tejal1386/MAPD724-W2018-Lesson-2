@@ -11,6 +11,12 @@
 		E41723EC2029411100D04F21 /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41723EB2029411100D04F21 /* Cloud.swift */; };
 		E41723EE2029499700D04F21 /* Distance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41723ED2029499700D04F21 /* Distance.swift */; };
 		E41723F120294AB200D04F21 /* CollisionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E41723F020294AB200D04F21 /* CollisionManager.swift */; };
+		E4309C25203267F700F0BB30 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4309C24203267F700F0BB30 /* ScoreManager.swift */; };
+		E4309C2920327D2F00F0BB30 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4309C2820327D2F00F0BB30 /* Label.swift */; };
+		E4309C2C203287C000F0BB30 /* GameOverScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4309C2A203287C000F0BB30 /* GameOverScene.sks */; };
+		E4309C2D203287C000F0BB30 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4309C2B203287C000F0BB30 /* GameOverScene.swift */; };
+		E4309C3420328CAB00F0BB30 /* GameStartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4309C3220328CAA00F0BB30 /* GameStartScene.swift */; };
+		E4309C3520328CAB00F0BB30 /* GameStartScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E4309C3320328CAB00F0BB30 /* GameStartScene.sks */; };
 		E49513C62020053C006EE1DA /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C52020053C006EE1DA /* GameObject.swift */; };
 		E49513C82020090B006EE1DA /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C72020090B006EE1DA /* GameProtocol.swift */; };
 		E49513CA2020098F006EE1DA /* Plane.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49513C92020098F006EE1DA /* Plane.swift */; };
@@ -45,6 +51,12 @@
 		E41723EB2029411100D04F21 /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		E41723ED2029499700D04F21 /* Distance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Distance.swift; sourceTree = "<group>"; };
 		E41723F020294AB200D04F21 /* CollisionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionManager.swift; sourceTree = "<group>"; };
+		E4309C24203267F700F0BB30 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		E4309C2820327D2F00F0BB30 /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		E4309C2A203287C000F0BB30 /* GameOverScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameOverScene.sks; sourceTree = "<group>"; };
+		E4309C2B203287C000F0BB30 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		E4309C3220328CAA00F0BB30 /* GameStartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameStartScene.swift; sourceTree = "<group>"; };
+		E4309C3320328CAB00F0BB30 /* GameStartScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameStartScene.sks; sourceTree = "<group>"; };
 		E49513C52020053C006EE1DA /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		E49513C72020090B006EE1DA /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
 		E49513C92020098F006EE1DA /* Plane.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plane.swift; sourceTree = "<group>"; };
@@ -90,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				E41723F020294AB200D04F21 /* CollisionManager.swift */,
+				E4309C24203267F700F0BB30 /* ScoreManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -104,6 +117,7 @@
 				E41723E920292FE900D04F21 /* Island.swift */,
 				E41723EB2029411100D04F21 /* Cloud.swift */,
 				E41723ED2029499700D04F21 /* Distance.swift */,
+				E4309C2820327D2F00F0BB30 /* Label.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -159,6 +173,10 @@
 		E4FB8D1A201FF8B900363BB8 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E4309C3320328CAB00F0BB30 /* GameStartScene.sks */,
+				E4309C3220328CAA00F0BB30 /* GameStartScene.swift */,
+				E4309C2A203287C000F0BB30 /* GameOverScene.sks */,
+				E4309C2B203287C000F0BB30 /* GameOverScene.swift */,
 				E4FB8CF1201FF1D400363BB8 /* GameScene.swift */,
 				E4FB8CED201FF1D400363BB8 /* GameScene.sks */,
 			);
@@ -251,11 +269,13 @@
 				E4FB8CF7201FF1D400363BB8 /* Main.storyboard in Resources */,
 				E4FB8CEE201FF1D400363BB8 /* GameScene.sks in Resources */,
 				E4FB8D15201FF1F500363BB8 /* yay.mp3 in Resources */,
+				E4309C3520328CAB00F0BB30 /* GameStartScene.sks in Resources */,
 				E4FB8CF9201FF1D400363BB8 /* Assets.xcassets in Resources */,
 				E4FB8CFC201FF1D400363BB8 /* LaunchScreen.storyboard in Resources */,
 				E4FB8CF0201FF1D400363BB8 /* Actions.sks in Resources */,
 				E4FB8D16201FF1F500363BB8 /* engine.mp3 in Resources */,
 				E4FB8D1D201FFD4D00363BB8 /* Info.plist in Resources */,
+				E4309C2C203287C000F0BB30 /* GameOverScene.sks in Resources */,
 				E4FB8D14201FF1F500363BB8 /* thunder.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,10 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4309C25203267F700F0BB30 /* ScoreManager.swift in Sources */,
 				E49513CC20201303006EE1DA /* Ocean.swift in Sources */,
+				E4309C2D203287C000F0BB30 /* GameOverScene.swift in Sources */,
 				E41723EC2029411100D04F21 /* Cloud.swift in Sources */,
 				E49513C62020053C006EE1DA /* GameObject.swift in Sources */,
+				E4309C3420328CAB00F0BB30 /* GameStartScene.swift in Sources */,
 				E41723F120294AB200D04F21 /* CollisionManager.swift in Sources */,
+				E4309C2920327D2F00F0BB30 /* Label.swift in Sources */,
 				E41723EA20292FE900D04F21 /* Island.swift in Sources */,
 				E41723EE2029499700D04F21 /* Distance.swift in Sources */,
 				E49513C82020090B006EE1DA /* GameProtocol.swift in Sources */,

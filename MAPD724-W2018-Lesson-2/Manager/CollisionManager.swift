@@ -21,9 +21,12 @@ class CollisionManager {
             if(!object2.isColliding!){
                 if (object2.name == "island"){
                   scene.run(SKAction.playSoundFileNamed("yay", waitForCompletion: false))
+                    ScoreManager.Score += 100
                 }
                 if (object2.name == "cloud"){
                     scene.run(SKAction.playSoundFileNamed("thunder", waitForCompletion: false))
+                    ScoreManager.Lives -= 1
+                    
                 }
                 object2.isColliding = true
             }

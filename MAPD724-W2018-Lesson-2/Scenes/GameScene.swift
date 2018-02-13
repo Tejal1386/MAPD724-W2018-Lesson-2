@@ -22,11 +22,13 @@ class GameScene: SKScene {
     var PlaneSprite: Plane?
     var islandSprite: Island?
     var cloudSprites: [Cloud] = []
+    var livesLabel: Label?
+    var scoreLabel: Label?
     
     override func didMove(to view: SKView) {
         
-       screenWidth = screenSize.width
-        screenHeight = screenSize.height
+       screenWidth = frame.width
+        screenHeight = frame.height
         //add ocean
         self.oceanSprite = Ocean()
         self.addChild(self.oceanSprite!)
@@ -47,6 +49,17 @@ class GameScene: SKScene {
             cloudSprites.append(cloud)
             self.addChild(cloudSprites[index])
         }
+        
+        //add label
+       
+         livesLabel = Label(labelString: "Lives: 5", position: CGPoint(x: 20.0, y: frame.height - 20.0), fontSize: 30.0, fontName: "Dock51", fontColor: SKColor.yellow, isCentered: false)
+        self.addChild(livesLabel!)
+        
+        //add label
+        
+         scoreLabel = Label(labelString: "Lives: 99999", position: CGPoint(x: frame.width * 0.5, y: frame.height - 20.0), fontSize: 30.0, fontName: "Dock51", fontColor: SKColor.yellow, isCentered: false)
+        self.addChild(scoreLabel!)
+        
         
        //background sound
         let engineSound = SKAudioNode(fileNamed: "engine.mp3")
@@ -113,5 +126,22 @@ class GameScene: SKScene {
             CollisionManager.CheckCllision(scene: self, object1: PlaneSprite!, object2: cloud)
             
         }
+        
+        //Update Labels
+        
+        if(ScoreManager.Lives > 0) {
+        livesLabel?.text = "Lives: \( ScoreManager.Lives)"
+        scoreLabel?.text = "Score: \( ScoreManager.Score)"
+        }
+        else
+        {
+            if let view = self.view{
+                if let scene = SKScene(fileNamed: "GameOverScene") {
+                    scene.scaleMode = .aspectFit
+                    view.presentScene(scene)
+                }
+            }
+        }
+        
     }
 }
